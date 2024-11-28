@@ -1,13 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canvas</title>
+	
+    <style>
+		@font-face {
+		font-family: 'CookieRun-Regular';
+		src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+		}
+		@font-face {
+    	font-family: 'Ramche';
+    	src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2') format('woff2');
+    	font-weight: normal;
+    	font-style: normal;
+		}
+		
+    	body{
+    		display: flex;
+    		flex-direction: column;
+    		justify-content: center;
+    		align-items: center;
+    		height: 100vh;
+    		margin: 0;
+			font-family: 'CookieRun-Regular';
+
+			/* 백그라운드 이미지 설정 */
+			 /*background: linear-gradient(to bottom, #a7a297, #dcd3c3); 위에서 아래로 그라데이션 */
+			background: linear-gradient(to bottom, #ffae82, #94d4ce); /* 위에서 아래로 그라데이션 */
+            /*background-color: #bfb8ab;*/ /* 이미지 파일 경로 */
+            background-size: contain; /* 이미지를 화면에 맞게 채움 */
+            background-position: center; /* 이미지를 중앙에 정렬 */
+            background-repeat: no-repeat; /* 이미지를 반복하지 않음 */
+            color: #f0f0f0; /* 텍스트 색상 (이미지 위에 표시될 경우 대비) */
+    	}
+    	.logo{
+    		width: 260px;
+    		height: auto;
+    		/*margin-bottom: 10px;*/
+    	}
+    	
+    	h1{
+    		margin-bottom: 20px;
+			font-size: 40px;
+    		font-family: 'Ramche';
+    		color: whitesmoke;
+    	}
+    
+    	#canvas{
+    		border: 1px solid #000;
+    		background-image: linear-gradient(0deg, #e0e0e0 1px, transparent 1px),linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+    		background-size: 5px 5px;
+			background-color: whitesmoke;
+			
+    	}
+    	#colorPalette{
+    		margin-top: 20px;
+			font-size: 25px;
+    	}
+    	
+    </style>
 </head>
+
 <body>
-    <h1>Collaborative 100x100 Canvas</h1>
+	<img src="logo1.png" alt="Logo" class="logo">
+    <h1>Collaborative 100 x 100 Canvas</h1>
     <canvas id="canvas" width="500" height="500" style="border:1px solid #000;"></canvas>
+    
+    <div id="colorPalette">
+    	<label for="colorPicker">Color Palette</label>
+    	<input type="color" id="colorPicker" value="#0000FF">
+    </div>
+    
     <script src="client.js"></script>
 </body>
 </html>
