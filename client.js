@@ -2,7 +2,8 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const PIXEL_SIZE = 5;
-const ws = new WebSocket('ws://10.0.2.15:8080');
+//const ws = new WebSocket('ws://10.0.2.15:8080');
+const ws = new WebSocket('ws://106.101.132.195:8080');
 
 const colorPicker = document.getElementById('colorPicker');
 
